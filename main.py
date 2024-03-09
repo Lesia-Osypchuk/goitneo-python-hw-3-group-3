@@ -104,10 +104,8 @@ def main():
             print(show_birthday(address_book, args[0]))
         elif command == "birthdays" and not args:
             results = print_birthdays_per_week(address_book)
-            for info in results:
-                print(f"{info['name']} - {info['birthday']}")
-            else:
-                print("Invalid command.")
+        else:
+            print("Invalid command.")
         
 if __name__ == "__main__":
     main()

@@ -10,7 +10,7 @@ def get_birthdays_per_week(users):
 
     for user in users:
         name = user["name"]
-        birthday = user["birthday"].date()
+        birthday = datetime.strptime(user['birthday'], '%d.%m.%Y').date()
         birthday_this_year = birthday.replace(year=today.year)
 
         if birthday_this_year < today:
